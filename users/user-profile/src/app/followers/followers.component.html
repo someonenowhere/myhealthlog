@@ -1,0 +1,25 @@
+<div class="container mx-auto pt-5">
+  <div class="row">
+    <div class="col-md-8 col-xs-12">
+      <p-chart type="bar" [data]="data"></p-chart>
+    </div>
+    <div class="col-md-4 col-xs-12">
+      <div class="table-responsive">
+        <table class="table table-bordered table-striped">
+          <thead>
+            <tr>
+              <th>Name.</th>
+              <th>Highest Followers </th>
+            </tr>
+          </thead>
+          <tbody *ngIf="followersDetails">
+            <tr *ngFor="let obj of followersDetails | slice:0:10; let i=index">
+              <td *ngIf="i<11">{{obj.name}}</td>
+              <td *ngIf="i<11">{{obj.followers}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

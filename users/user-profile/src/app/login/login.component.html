@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="col-md-6 mx-auto pt-5">
+    <div class="card rounded-0">
+      <div class="card-header">
+        <h3 class="mb-0 text-center">Login</h3>
+      </div>
+      <div class="card-body">
+        <form class="form">
+          <div class="form-group">
+            <label for="">Email</label>
+            <input [(ngModel)]="loginUserData.email" name="email" type="text" class="form-control rounded-0" required>
+          </div>
+          <div class="form-group">
+            <label for="">Password</label>
+            <input [(ngModel)]="loginUserData.password" name="password" type="password" class="form-control rounded-0"
+              required>
+          </div>
+          <label for="" class="float-left">New user? <a routerLink="/sign-up">Sign UP</a></label>
+          <button (click)="loginUser()" class="btn btn-success float-right">Login</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
